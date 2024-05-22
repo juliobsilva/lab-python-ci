@@ -20,6 +20,7 @@ jobs:
         python -m venv venv
         source venv/bin/activate
         pip install -r requirements.txt
+        pip install wheel
     - name: Build package
       run: |
         python setup.py sdist bdist_wheel
