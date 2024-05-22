@@ -30,7 +30,7 @@ jobs:
     - name: Publish package
       run: |
         python3 -m pip install --upgrade twine
-        python3 -m twine upload --repository lab-python-ci dist/*
+        python3 -m twine upload --repository pypi dist/*
       env:
         TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
         TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
