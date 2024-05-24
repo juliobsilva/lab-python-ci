@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           export PATH="$HOME/.local/bin:$PATH"
-          cd /home/runner/work/lab-python-ci/
+          cd /home/runner/work/lab-python-ci/with/
           poetry install
   
       - name: Build package
