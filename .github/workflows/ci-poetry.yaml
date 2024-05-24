@@ -25,6 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           export PATH="$HOME/.local/bin:$PATH"
+          cd /path/to/directory/with/pyproject.toml
           poetry install
   
       - name: Build package
