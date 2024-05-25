@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "my_app__darvin2"
+name = "lab-python-ci"
 version = "0.1.0"
 description = ""
 authors = ["Your Name <your.email@example.com>"]
