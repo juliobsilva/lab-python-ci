@@ -1,0 +1,41 @@
+name: Poetry Build and Deploy 
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'  # ou a versão do Python que você está usando
+
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          export PATH="$HOME/.local/bin:$PATH"
+
+      - name: Install dependencies
+        run: |
+          poetry install
+
+      - name: Build the package
+        run: |
+          poetry build
+     
+          - name: Publish to PyPI
+          uses: pypa/gh-action-pypi-publish@master
+          with:
+            user: ${{ secrets.PYPI_USERNAME }}
+            password: ${{ secrets.PYPI_PASSWORD }}
+  
