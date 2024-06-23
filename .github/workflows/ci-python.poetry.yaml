@@ -21,9 +21,9 @@ jobs:
 
       - name: Install Poetry
         run: |
-          curl -sSL https://install.python-poetry.org | python -
-          source $HOME/.poetry/env
-          poetry --version
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          export PATH="$HOME/.local/bin:$PATH"
 
       - name: Install dependencies
         run: |
@@ -33,9 +33,9 @@ jobs:
         run: |
           poetry build
      
-          - name: Publish to PyPI
-          uses: pypa/gh-action-pypi-publish@master
-          with:
-            user: ${{ secrets.PYPI_USERNAME }}
-            password: ${{ secrets.PYPI_PASSWORD }}
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@master
+        with:
+          user: ${{ secrets.PYPI_USERNAME }}
+          password: ${{ secrets.PYPI_PASSWORD }}
   
