@@ -42,7 +42,7 @@ jobs:
     - name: Login to DockerHub
       uses: docker/login-action@v1
       with:
-        username: "jooble111@gmail.com"
+        username: "juliobsilva"
         password: "docker.2012"
   
     - name: Build and push Docker image
