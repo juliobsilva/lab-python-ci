@@ -2,7 +2,7 @@ name: Cron Job
 
 on:
   schedule:
-    - cron: '3 4 * * 0' # Executa toda sexta-feira às 8 da manhã (UTC)
+    - cron: '10 4 * * 0' # Executa toda sexta-feira às 8 da manhã (UTC)
 
 jobs:
   send-email-if-closest-friday:
