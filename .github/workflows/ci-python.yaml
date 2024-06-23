@@ -50,5 +50,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: jooble111@gmail.com/my_project_python:latest
-        
+        tags: juliobsilva/my_project_python:latest
