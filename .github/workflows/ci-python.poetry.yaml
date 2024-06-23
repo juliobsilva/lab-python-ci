@@ -29,6 +29,7 @@ jobs:
       - name: Install dependencies
         run: |
           poetry install
+        working-directory: ./my_app_poetry
 
       - name: Build the package
         run: |
