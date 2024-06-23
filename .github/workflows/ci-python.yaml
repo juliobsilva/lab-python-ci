@@ -51,3 +51,4 @@ jobs:
         context: .
         push: true
         tags: jooble111@gmail.com/my_project_python:latest
+        
