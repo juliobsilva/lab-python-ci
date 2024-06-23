@@ -31,6 +31,12 @@ jobs:
           poetry install
         working-directory: ./my-app-poetry
 
+      - name: Upload áckage
+        uses: actions/upload-artifact@v4
+        with:
+          path: ${{github.workspace}}/dist/*
+          retention-days: 7
+
       - name: Build the package
         run: |
           poetry build
