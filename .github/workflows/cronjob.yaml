@@ -1,4 +1,4 @@
-name: Closest Friday to 15th
+name: Cron Job
 
 on:
   schedule:
