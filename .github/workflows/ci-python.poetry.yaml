@@ -34,8 +34,8 @@ jobs:
       - name: Upload áckage
         uses: actions/upload-artifact@v4
         with:
-          name: dist
-          path: ${{github.workspace}}/dist/*
+          name: sdist
+          path: ${{github.workspace}}/sdist/*
           retention-days: 7
 
       - name: Build the package
