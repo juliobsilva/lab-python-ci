@@ -35,7 +35,6 @@ jobs:
       - name: Build the package
         run: |
           poetry build
-        working-directory: ./my-app-poetry
      
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@master
