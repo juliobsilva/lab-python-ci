@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "app-poetry"
-version = "0.0.1"
+name = "my-app-poetry"
+version = "0.0.5"
 description = "Descrição do seu pacote"
 authors = ["Seu Nome <seu.email@example.com>"]
 readme = "README.md"
