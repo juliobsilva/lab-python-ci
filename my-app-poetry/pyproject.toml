@@ -1,18 +1,11 @@
 [tool.poetry]
 name = "my-app-poetry"
-version = "0.1.0"
+version = "0.0.1"
 description = "Descrição do seu pacote"
 authors = ["Seu Nome <seu.email@example.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-
-[tool.poetry.include]
-include = [
-    "my-app-poetry/**",
-    "README.md",
-    "LICENSE"
-]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
