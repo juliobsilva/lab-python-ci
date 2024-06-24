@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='my-app-pypi',
-    version='0.0.5',
+    name='my-app-pypi-srv',
+    version='0.0.6',
     packages=find_packages(),
     install_requires=[
         'flask==2.0.1',
